@@ -80,12 +80,12 @@ module Paperclip
 
         # Return encoded metadata as String
         def meta_encode(meta)
-          Base64.encode64(Marshal.dump(meta))
+          meta
         end
 
         # Return decoded metadata as Object
         def meta_decode(meta)
-          Marshal.load(Base64.decode64(meta))
+          meta
         end
 
         # Retain existing meta values that will not be recalculated when
