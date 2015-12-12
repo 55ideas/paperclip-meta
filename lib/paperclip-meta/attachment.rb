@@ -73,7 +73,7 @@ module Paperclip
         def read_meta(style, item)
           if instance.respond_to?(:"#{name}_meta") && instance_read(:meta)
             if (meta = meta_decode(instance_read(:meta)))
-              meta[style] && meta[style][item]
+              meta[style.to_s] && meta[style.to_s][item.to_s]
             end
           end
         end
